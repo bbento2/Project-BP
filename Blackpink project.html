@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8"> <!--ตัวอักษรเข้ารหัสของ Unicode-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- width=device-width คือ การกำหนดขนาดหน้าเว็บให้ปรับขนาดตามความละเอียดหน้าจอ
+    ส่วน initial-scale=1.0 คือการกำหนดขนาด scale ของงานให้เท่ากับ 1 เท่าของหน้าจอ-->
+  <link rel = "shortcut icon" type ="x-icon" href="./picture/iconblackpink.png"> <!--การลิ้งค์รูปไอคอนให้เป็นรูปไอคอนเว็บที่เราต้องการ-->
+	<title> Blackpink </title> <!--ชื่อหัวเว็บ-->
+  <style>
+     /*style มีไว้ตกแต่งเว็บ โดยใช้ภาษา css*/
+    body{
+        background-image: url("./picture/homeback.jpg"); /*background img โดยใช้รูป */
+        background-attachment: fixed;  /*เพื่อให้รูปพื้นหลังไม่เลื่อนตามเวลาเลื่อนscrollbar*/
+        background-size: 100% 100%; /*ให้รูปมีขนาดเท่ากับหน้าจอ*/
+    }
+    /*กำหนดเงาข้อความ text-shadow ให้กับหัวข้อ โดยโครงสร้างเป็นดังนี้้ text-shadow: moveRight moveUp color; */
+    h1,h3{
+        text-shadow: 3px 2px rgb(191, 197, 247);  /*เงาของตัวอักษรให้มีความหนา 3px เบลอ 2 px สีเงา*/
+    }
+</style>
+</head>
+<body> <!--คือคำสั่งบอกส่วนเนื้อเรื่อง ที่จะถูกแสดงผลในเว็ปบราวเซอร์-->
+  <link rel="stylesheet" href="bp1.css"> <!--ลิ้งค์ไฟล์css-->
+<div class="container bg" style="min-height:65vw;"> <!--Container เป็นกล่องสำหรับเก็บเนื้อหา ส่วนประกอบต่าง ๆ ไว้ภายในเป็นรูปแบบขนาดตายตัว แสดงอยู่กึ่งกลางหน้าจอ โดยเรากำหนดให้มี min height คือสูงขั้นต่ำ65 vw เพื่อในกรณีที่เนื้อหามีขนาดเล็กกว่าความสูงขั้นต่ำ ความสูงขั้นต่ำจะถูกนำไปใช้
+แต่ถ้าเนื้อหามีขนาดใหญ่กว่าความสูงขั้นต่ำ min height จะไม่มีผลแต่อย่างใด--> 
+  <div class="content"> <!--ข้อมูลในเว็บ-->
+    <div class="phuket" style="width:60%;height: auto;"> <!--กำหนดให้เนื้อหาในเว็บ มีความกว้าง 60% ให้ความสูงเป็นอัตโนมัติ เพราะให้browser คำนวณความสูงให้เป็นค่าเริ่มต้นนั่นเอง-->
+      <div class="tnx"> <!--เนื้อหา-->
+        <h1 style = "font-size: 5vw;"><font color = "#E89292" ><i class="Blackpink1"></i> Blackpink</font></h1>
+      </div>
+      <div class="txt"> <!--เนื้อหา-->
+        <h1 style = "font-size: 7vw;"><font color = "#ED9FE0" >IN</font></h1>
+        <h1 style = "font-size: 7vw;"><font color = "#ED9FE0" >YOUR</font></h1>
+        <h1 style = "font-size: 7vw;"><font color = "#ED9FE0" >AREA</font></h1>
+      </div>
+      <font color = "white" ><p style = "font-size: 1vw;">แบล็กพิงก์ (BLACKPINK) เป็นเกิร์ลกรุ๊ปเกาหลีใต้ สังกัด YG Entertainment </p>
+      <p style = "font-size: 1vw;">มีสมาชิกสี่คน คือ จีซู, เจนนี่, โรเซ่ และลิซ่า </p></font>
+      </div>
+    <div class="card" style="width:60%;height:auto;"> <!--card popup กำหนดให้ มีความกว้าง 60% ให้ความสูงเป็นอัตโนมัติ เพราะให้browser คำนวณความสูงให้เป็นค่าเริ่มต้นนั่นเอง-->
+      <a href="เนือหา  History.html" target="_self"><!--card 1 link file html history และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="box1">
+          <h2>History</h2>
+        </div>
+      </a>
+      <a href="Derivation.html" target="_self"><!--card 2 link file html derivation และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="box2">
+          <h2>Derivation</h2>
+        </div>
+      </a>
+      <a href="Members.html" target="_self"><!--card 3 link file html members และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="box3">
+          <h2>Members</h2>
+        </div>
+      </a>
+      <a href="Albums.html" target="_self"> <!--card 4 link file html albums และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="box4">
+          <h2>Albums</h2>
+        </div>
+      </a>
+      <a href="Awars.html" target="_self"> <!--card 5 link file html awars และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="box5">
+          <h2>Awars</h2>
+        </div>
+      </a>
+      <a href="Satisfaction.html" target="_self"> <!--card 6 link file html ใบประเมินเว็บ และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="box6">
+          <h2>Satisfaction</h2>
+          </div>
+          </a>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

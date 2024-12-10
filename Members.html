@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8"> <!--ตัวอักษรเข้ารหัสของ Unicode-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- width=device-width คือ การกำหนดขนาดหน้าเว็บให้ปรับขนาดตามความละเอียดหน้าจอ
+    ส่วน initial-scale=1.0 คือการกำหนดขนาด scale ของงานให้เท่ากับ 1 เท่าของหน้าจอ-->
+  <link rel = "shortcut icon" type ="x-icon" href="./picture/iconblackpink.png"> <!--การลิ้งค์รูปไอคอนให้เป็นรูปไอคอนเว็บที่เราต้องการ-->
+	<title> Members </title> <!--ชื่อหัวเว็บ-->
+  <style>
+    /*style มีไว้ตกแต่งเว็บ โดยใช้ภาษา css*/
+    body{
+        background-image: url("./picture/pbg.jpg"); /*background img โดยใช้รูป */
+        background-attachment: fixed;  /*เพื่อให้รูปพื้นหลังไม่เลื่อนตามเวลาเลื่อนscrollbar*/
+        background-size: 100% 100%; /*ให้รูปมีขนาดเท่ากับหน้าจอ*/
+    }
+    /*กำหนดเงาข้อความ text-shadow ให้กับหัวข้อ โดยโครงสร้างเป็นดังนี้้ text-shadow: moveRight moveUp color; */
+    h1,h3{
+        text-shadow: 3px 2px rgb(191, 197, 247);  /*เงาของตัวอักษรให้มีความหนา 3px เบลอ 2 px สีเงา*/
+    }
+</style>
+</head>
+<body> <!--คือคำสั่งบอกส่วนเนื้อเรื่อง ที่จะถูกแสดงผลในเว็ปบราวเซอร์-->
+    <link rel="stylesheet" href="bp1.css"> <!--ลิ้งค์ไฟล์css-->
+<div class="container bg" ><!--Container เป็นกล่องสำหรับเก็บเนื้อหา ส่วนประกอบต่าง ๆ ไว้ภายในเป็นรูปแบบขนาดตายตัว แสดงอยู่กึ่งกลางหน้าจอ --> 
+  <div class="navBar">  <!--menu web-->
+    <div class="logo"> <!--menu web-->
+      <a href="#">
+      </a>
+    </div>
+    <ul> <!--list menu webpage-->
+      <li><a href="Blackpink project.html">Home</a></li>
+      <li><a href="เนือหา  History.html">History</a></li>
+      <li><a href="Derivation.html">Derivation</a></li>
+      <li><a href="Members.html">Members</a></li> 
+      <li><a href="Albums.html">Albums</a></li>
+      <li><a href="Awars.html">Awars</a></li>
+      <li><a href="Satisfaction.html">Satisfaction</a></li>
+  </ul>
+  <div class="content"> <!--ข้อมูลในเว็บ-->
+    <div class="phuket" style="width:60%;height: auto;"> <!--กำหนดให้เนื้อหาในเว็บ มีความกว้าง 60% ให้ความสูงเป็นอัตโนมัติ เพราะให้browser คำนวณความสูงให้เป็นค่าเริ่มต้นนั่นเอง-->
+      <div class="tnx"> <!--เนื้อหา-->
+        <h3 style = "font-size: 5vw;"><font color ="#CCAADD "><i class="Blackpink1"></i> Members</font></h3>
+      </div>
+      <div class="txt"> <!--เนื้อหา-->
+        <h1 style = "font-size: 7vw;"><font color ="#d5b6d5">OF</font></h1>
+        <h1 style = "font-size: 7vw;"><font color ="#d5b6d5">BLACK</font></h1>
+        <h1 style = "font-size: 7vw;"><font color ="#d5b6d5">PINK</font></h1>
+      </div>
+    </div>
+    <div class="card" style="width:50%;height: auto;"> <!--card popup กำหนดให้ มีความกว้าง 50% ให้ความสูงเป็นอัตโนมัติ เพราะให้browser คำนวณความสูงให้เป็นค่าเริ่มต้นนั่นเอง-->
+      <a href="Jisoo.html" target="_self"> <!--card 1 link file html jisoo และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="boxJisoo">
+          <h2>Jisoo</h2>
+        </div>
+      </a>
+      <a href="Jennie.html" target="_self"> <!--card 2 link file html jennie และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="boxJennie">
+          <h2>Jennie</h2>
+        </div>
+      </a>
+      <a href="Lisa.html" target="_self"> <!--card 3 link file html lisa และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="boxLisa">
+          <h2>Lisa</h2>
+        </div>
+      </a>
+      <a href="Rosé.html" target="_self"> <!--card 4 link file html rose และคำสั่ง target เป็นการบอกให้เปิดหน้าpageใหม่ โดยใช้รุปแบบ_self เปิดในหน้าเดิม-->
+        <div class="boxRose">
+          <h2>Rosé</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

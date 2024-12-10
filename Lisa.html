@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8"> <!--ตัวอักษรเข้ารหัสของ Unicode-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- width=device-width คือ การกำหนดขนาดหน้าเว็บให้ปรับขนาดตามความละเอียดหน้าจอ
+    ส่วน initial-scale=1.0 คือการกำหนดขนาด scale ของงานให้เท่ากับ 1 เท่าของหน้าจอ-->
+  <link rel = "shortcut icon" type ="x-icon" href="./picture/iconblackpink.png"> <!--การลิ้งค์รูปไอคอนให้เป็นรูปไอคอนเว็บที่เราต้องการ-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">  <!--ลิ้งค์ไฟล์css ของicon social media-->
+	<title> Lisa </title> <!--ชื่อหัวเว็บ-->
+  <style>
+    /*style มีไว้ตกแต่งเว็บ โดยใช้ภาษา css*/
+    body{
+        background-image: url("./picture/lisaa.jpg"); 
+        background-attachment: fixed;   /*เพื่อให้รูปพื้นหลังไม่เลื่อนตามเวลาเลื่อนscrollbar*/
+        background-size: 100% 100%; /*ให้รูปมีขนาดเท่ากับหน้าจอ*/
+    }
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); /*นำเข้าลิ้งค์css จากเว็บนี้*/
+    .icons{ /*icon social*/
+        display: inline-flex;/*icon วางแนวนอนของในกล่องก็ไหลตามแนวนอน*/
+    }
+    .icons a{
+        margin: 0 25px; /*เว้นระยะขอบบนและล่าง ด้านละ 0px and เว้นระยะขอบซ้ายและขวา ด้านละ 25px*/
+        text-decoration: none;/*เป็นการกำหนดไม่ใ้ห้มีเส้นใต้ข้อความ*/
+        color: #fff;
+        display: block;/*ข้อความในแท็กนั้นจะขึ้นบรรทัดใหม่ทันที, ความกว้างและความสูงในตอนแรกจะยังเหมือนเดิม*/
+        position: relative;/*จัดตำแหน่งโดยอิงจาก div*/
+    }
+    .icons a .layer{ /*layer ซ้อนicon*/
+        width: 55px;/*ความกว้าง 55px*/
+        height: 55px; /*ความสูง 55px*/
+        transition: transform 0.3s; /*เพื่อเอามาทำงานเกี่ยวกับการเคลื่อนไหวโดยเฉพาะ โดยย้ายอปก 0.3วิ*/
+    }
+    .icons a:hover .layer{
+            transform: rotate(-35deg) skew(20deg); /*ย้ายอปก โดยหมุนทวนเข็มนาฬิกา35องศา องค์ประกอบ 20 องศาตามแนวแกน X*/
+    }
+    .icons a .layer span{
+        position: absolute; /*แสดงผลเป็นอิสระ คือจะอยู่ตรงไหนก็ได้ จะอยู่แค่ภายใต้ element ที่ครอบมันอีกทีเท่านั้น*/
+        top: 0;/*ตำแหน่งก็จะอยู่บนซ้ายของ browser */
+        left: 0; /*ตำแหน่งก็จะอยู่บนซ้ายของ browser */
+        height: 100%; /*ความสูง 100%*/
+        width: 100%; /*ความกว้าง 100%*/
+        border: 1px solid #fff;
+        border-radius: 5px; /*เส้นขอบโค้ง 5 px*/
+        transition: all 0.3s; /*layer โผล่มาทั้งหมด 0.3วิ*/
+    }
+    .icons a .layer span.fab{
+        font-size: 30px;
+        line-height: 55px;
+        text-align: center;
+    }
+    .icons a:hover .layer span:nth-child(1){
+        opacity: 0.2; /*ความโปร่งใส เป็น0.2*/
+    }
+    .icons a:hover .layer span:nth-child(2){
+        opacity: 0.4; /*ความโปร่งใส เป็น0.4*/
+        transform: translate(5px, -5px); /*ย้ายตำแหน่งวัตถุ โดย 5px คือ เป็นการปรับตั้งแหน่งให้ย้ายไปขวาตามแนวนอน และ -5px คือเป็นการปรับตำแหน่งให้ย้ายลงข้างล่างตามแนวตั้ง*/
+    }
+    .icons a:hover .layer span:nth-child(3){
+        opacity: 0.6; /*ความโปร่งใส เป็น0.6*/
+        transform: translate(10px, -10px); /*ย้ายตำแหน่งวัตถุ โดย 10px คือ เป็นการปรับตั้งแหน่งให้ย้ายไปขวาตามแนวนอน และ -10px คือเป็นการปรับตำแหน่งให้ย้ายลงข้างล่างตามแนวตั้ง*/
+    }
+    .icons a:hover .layer span:nth-child(4){
+        opacity: 0.8; /*ความโปร่งใส เป็น0.8*/
+        transform: translate(15px, -15px); /*ย้ายตำแหน่งวัตถุ โดย 15px คือ เป็นการปรับตั้งแหน่งให้ย้ายไปขวาตามแนวนอน และ -15px คือเป็นการปรับตำแหน่งให้ย้ายลงข้างล่างตามแนวตั้ง*/
+    }
+    .icons a:hover .layer span:nth-child(5){
+        opacity: 1; /*ความโปร่งใส เป็น1*/
+        transform: translate(20px, -20px); /*ย้ายตำแหน่งวัตถุ โดย 20px คือ เป็นการปรับตั้งแหน่งให้ย้ายไปขวาตามแนวนอน และ -20px คือเป็นการปรับตำแหน่งให้ย้ายลงข้างล่างตามแนวตั้ง*/
+    }
+    .icons a:nth-child(1) .layer span,
+    .icons a:nth-child(1) .text{
+        color: rgb(228, 64, 95);
+        border-color: rgb(228, 64, 95);
+    }
+    .icons a:nth-child(2) .layer span,
+    .icons a:nth-child(2) .text{
+        color: #E1306C;
+        border-color: #E1306C;
+    }
+    .icons a:hover:nth-child(1) .layer span{
+        box-shadow: -1px 1px 3px rgb(228, 64, 95);/*สร้างเงา ในแนวนอนโดยขยับไปทางซ้าย -1px และสร้างเงาในแนวตั้ง โดยขยับลง 1px และเบลอกล่อง 3px รหัสcolor*/ 
+    }
+    .icons a:hover:nth-child(2) .layer span{
+        box-shadow: -1px 1px 3px #E1306C;/*สร้างเงา ในแนวนอนโดยขยับไปทางซ้าย -1px และสร้างเงาในแนวตั้ง โดยขยับลง 1px และเบลอกล่อง 3px รหัสcolor*/ 
+    }
+    .icons a .text{
+        position: absolute; /*แสดงผลเป็นอิสระ คือจะอยู่ตรงไหนก็ได้ จะอยู่แค่ภายใต้ element ที่ครอบมันอีกทีเท่านั้น*/
+        left: 50%; /*ซ้าย 50%*/
+        bottom: -5px; /*ล่าง -5px*/
+        opacity: 0; /*ความโปร่งใส เป็น0*/
+        font-weight: 500; /*font size 500*/
+        transform: translateX(-50%); /*ย้ายตำแหน่งวัตถุ โดย 50% คือ เป็นการปรับตั้งแหน่งให้ย้ายไปขวาตามแนวนอน*/
+        transition: bottom 0.3s ease, opacity 0.3s ease; /*การให้text อยู่ข้างล่าง 0.3วิ เริ่มช้า กลางเร็วปกติ จบช้า โปร่งใส 0.3วิ เริ่มช้า กลางเร็วปกติ จบช้า*/
+    }
+    .icons a:hover .text{
+        bottom: -25px;/*ล่าง -25px*/
+        opacity: 1;/*ความโปร่งใส เป็น1*/
+    }
+    /*กำหนดเงาข้อความ text-shadow ให้กับหัวข้อ โดยโครงสร้างเป็นดังนี้้ text-shadow: moveRight moveUp color; */
+    h2,h3{
+        text-shadow: 3px 2px rgb(191, 197, 247); /*เงาของตัวอักษรให้มีความหนา 3px เบลอ 2 px สีเงา*/
+    }
+    .wrapper{
+        width: 500px; /*ความกว้าง 500px*/
+        margin: auto; /*ระยะห่างภายนอกกรอบ เป็นอัตโนมัติ ให้browser คำนวณให้*/
+        padding: 20px; /*ช่องว่างภายในกรอบ เป็น20 px*/
+        background: #7E7A72 ; 
+        margin-top: 20px;/* เว้นระยะขอบบน 20 px*/
+    }
+    table{
+        width: 500px; /*ความกว้าง 500px*/
+        background: #a8a6a4;
+        border: 1px solid;/*เส้นขอบ 1 px  เข้ม*/
+    }
+</style>
+</head>
+<body>
+    <link rel="stylesheet" href="bp1.css">
+    <div>
+      <!--เนื้อหาcontent web-->
+<div class="container bg" style="min-height:127vw;">  <!--min-height ขนาด content หน่วย vw ไว้สำหรับ viewpoint เวลาย่อ/ขยายหน้าจอ-->
+  <div class="navBar"><!--menu web-->
+    <div class="logo"><!--menu web-->
+      <a href="#">
+      </a>
+    </div>
+    <ul><!--list menu webpage-->
+      <li><a href="Blackpink project.html" >Home</a></li>
+      <li><a href="เนือหา  History.html">History</a></li>
+      <li><a href="Derivation.html">Derivation</a></li>
+      <li><a href="Members.html">Members</a></li> 
+      <li><a href="Albums.html">Albums</a></li>
+      <li><a href="Awars.html">Awars</a></li>
+      <li><a href="Satisfaction.html">Satisfaction</a></li>
+  </ul>
+  </div>
+  <div class="content"><!--ข้อมูลในเว็บ-->
+    <div class="phuket" style="width:60%;height:auto;"><!--กำหนดให้เนื้อหาในเว็บ มีความกว้าง 60% ให้ความสูงเป็นอัตโนมัติ เพราะให้browser คำนวณความสูงให้เป็นค่าเริ่มต้นนั่นเอง-->
+      <div class="tnx"><!--เนื้อหา-->
+        <br>
+        <br>
+        <h2 style ="font-size: 8vw;"><font color ="#FFDCB2"><i class="Blackpink1"></i> Lisa</font></h2>
+     <br>
+    <br>
+      <font color = "#FFF0B4"><p style = "font-size: 1vw;">ลลิษา มโนบาล หรือ ลิซ่า BLACKPINK ศิลปินสาวชาวไทย เป็นหนึ่งในสมาชิกของวงเกิร์ลกรุ๊ปเกาหลีชื่อดัง BLACKPINK เกิดเมื่อวันที่ 27 มีนาคม พ.ศ. 2540 </p>
+  <p style = "font-size: 1vw;">โดยชื่อเดิมของเธอ คือ “ปราณปรียา มโนบาล” ต่อมาได้มีการเปลี่ยนชื่อเป็น ลลิษา มโนบาล ซึ่งคำว่า “ลลิษา” มีความหมายว่า "บุคคลที่ได้รับการยกย่อง" </p>
+	<br><p style = "font-size: 1vw;">จบการศึกษาระดับประถมที่โรงเรียนประภามนตรี 1 และระดับมัธยมที่โรงเรียนประภามนตรี 2 ซึ่งเธอเป็นเด็กกิจกรรมตัวยงของโรงเรียน นอกจากนี้ชื่อเล่นในวัยเด็กของเธอมีชื่อว่า “ป๊อกแป๊ก” </p>
+	<br><p style = "font-size: 1vw;">ลิซ่า BLACKPINK มีความสนใจในวัฒนธรรม K-pop อีกทั้งยังสนใจการเต้นตั้งแต่ยังเป็นเด็ก โดยเคยแข่งขันเต้นในโครงการ To Be Number One และเป็นหนึ่งในสมาชิกของ "วีซาคูล" (We Zaa Cool) ทีมนักเต้นที่มีสมาชิกทั้งหมด 11 คน </p>
+  <p style = "font-size: 1vw;">ซึ่งหนึ่งสมาชิกของทีมเต้นนี้ คือ "แบมแบม" กันต์พิมุกต์ ภูวกุล ที่ปัจจุบันเป็นหนึ่งในสมาชิกของวง GOT7</p>
+	<br> <p style = "font-size: 1vw;">ต่อมาในปี พ.ศ. 2553 ค่าย YG Entertainment ได้มาเปิดออดิชั่นในประเทศไทยเป็นครั้งแรก ซึ่ง ลิซ่า เป็นคนเดียวที่ผ่านการออดิชั่นมาได้ และได้เข้าเป็นศิลปินฝึกหัดของค่าย YG Entertainment อย่างเต็มตัวในวันที่ 11 เมษายน พ.ศ. 2554 </p>
+  <p style = "font-size: 1vw;">เธอฝึกหัดนานกว่า 5 ปี และได้เดบิวต์ในฐานะหนึ่งในสมาชิกของวง BLACKPINK พร้อมกับปล่อยอัลบั้ม สแควร์วัน ในวันที่ 8 สิงหาคม พ.ศ. 2559</font></p>
+  <br>
+  <br>
+  <!--ผลงานเพลง ตาราง-->
+  <div style='overflow-x:auto'>  <!--สามารถกำหนดว่าจะเก็บเนื้อหาหรือเพิ่มแถบเลื่อน เมื่อเนื้อหามีขนาดใหญ่มากเกินไปหรือล้น ที่จะพอดีกับพื้นที่ที่กำหนด-->
+  <div class="wrapper"><!--or container--> 
+  <table border="1" width="100%">  <!--ความหนาของกรอบตาราง 1 ความกว้าง 100%-->
+    <tr>
+      <th style ="font-size: 1vw;"><center><font color ="#FFDCB2">Albums</center></font></th>
+      <th style ="font-size: 1vw;"><center><font color ="#FFDCB2">Name</center></font></th>
+    </tr>
+    <tr>
+      <td style ="font-size: 1vw;"><center><img border="0" src="./picture/lalisa.jpg" width="241" height="163"></center></td>
+      <td style ="font-size: 1vw;"><center><font color ="#FFDCB2">Lalisa<center></font>
+        <br>
+        <div class = "music">
+          <audio src="./music/LISA - LALISA (Official Audio).mp3" controls></audio><!--นำเข้าเพลง และมีคำสั่ง control เพื่อเพิ่มการควบคุมเสียง เช่น เล่นเพลง หยุดเพลง ปรับระดับเสียง-->
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <td style ="font-size: 1vw;"><center><img border="0" src="./picture/money.jpg" width="241" height="163"></center></td>
+      <td style ="font-size: 1vw;"><center><font color ="#FFDCB2">Money</center></font>
+        <br>
+        <div class = "music">
+          <audio src="./music/LISA - MONEY (Lyrics).mp3" controls></audio><!--นำเข้าเพลง และมีคำสั่ง control เพื่อเพิ่มการควบคุมเสียง เช่น เล่นเพลง หยุดเพลง ปรับระดับเสียง-->
+          </div>
+        </td>
+    </tr>
+  </table>
+  </div>
+  </div>
+  <br>
+  <br>
+	<font color = "#FFDCB2"><font size = "3vw"><b>แหล่งอ้างอิง</b></font></font>
+	  <body vlink = "white" link = "yellow" alink = "red"><!--ตัวอักษรlink ถ้าเราเคยเยี่ยมชมเว็บ ลิ้งค์เว็บจะเป็นสีขาว แต่ถ้าเรายังไม่ได้ชมลิ้งค์เว็บ ลิ้งค์เว็บจะเป็นสีเหลือง  และเมื่อคลิกลิ้งค์จะเป็นสีแดง-->
+    <a href = "https://music.trueid.net/th-th/detail/yjdBAEz6oewN">Trueid
+	</a>
+  <br>
+  <br>
+  <h3 style="font-size:2.5vw;"><font color = "#FFDCB2">Social Media</font></h3>
+    <br>
+    <br>
+      <div class="icons">
+        <a href="https://www.instagram.com/lalalalisa_m/?hl=en">
+           <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-instagram"></span>
+           </div>
+           <div class="text">
+              Instagram
+           </div>
+        </a>
+        <a href="https://www.youtube.com/@lalalalisa_m">
+           <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-youtube"></span>
+           </div>
+           <div class="text">
+              YouTube
+           </div>
+        </a>
+     </div> 
+  </body>
+  </html>

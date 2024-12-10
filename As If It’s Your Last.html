@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset = "UTF-8"> <!--ตัวอักษรเข้ารหัสของ Unicode-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- width=device-width คือ การกำหนดขนาดหน้าเว็บให้ปรับขนาดตามความละเอียดหน้าจอ
+    ส่วน initial-scale=1.0 คือการกำหนดขนาด scale ของงานให้เท่ากับ 1 เท่าของหน้าจอ-->
+  <link rel = "shortcut icon" type ="x-icon" href="./picture/iconblackpink.png"> <!--การลิ้งค์รูปไอคอนให้เป็นรูปไอคอนเว็บที่เราต้องการ-->
+	<title> As If It’s Your Last (Digital Single) </title> <!--ชื่อหัวเว็บ-->
+  <style>
+     /*style มีไว้ตกแต่งเว็บ โดยใช้ภาษา css*/
+    body{
+        background-image: url("./picture/55555.jpg");
+        background-attachment: fixed;   /*เพื่อให้รูปพื้นหลังไม่เลื่อนตามเวลาเลื่อนscrollbar*/
+        background-size: 100% 100%; /*ให้รูปมีขนาดเท่ากับหน้าจอ*/
+    }
+    img {
+        max-width: 100%; /*ใช้เพื่อกำหนดความกว้างสูงสุดของอปก*/
+        height: auto; /*ความสูง ให้browser คำนวณความสูงให้*/
+    }
+    /*กำหนดเงาข้อความ text-shadow ให้กับหัวข้อ โดยโครงสร้างเป็นดังนี้้ text-shadow: moveRight moveUp color; */
+    h1{
+        text-shadow: 3px 2px rgb(191, 197, 247); /*เงาของตัวอักษรให้มีความหนา 3px เบลอ 2 px สีเงา*/
+    }
+</style>
+</head>
+<body> <!--คือคำสั่งบอกส่วนเนื้อเรื่อง ที่จะถูกแสดงผลในเว็ปบราวเซอร์-->
+    <link rel="stylesheet" href="bp1.css"> <!--ลิ้งค์ไฟล์css-->
+<div class="container bg" style="min-height: 50vw;"> <!--Container เป็นกล่องสำหรับเก็บเนื้อหา ส่วนประกอบต่าง ๆ ไว้ภายในเป็นรูปแบบขนาดตายตัว แสดงอยู่กึ่งกลางหน้าจอ--> 
+  <div class="navBar"> <!--menu web-->
+    <div class="logo"> <!--menu web-->
+      <a href="#">
+      </a>
+    </div>
+    <ul> <!--list menu webpage-->
+      <li><a href="Blackpink project.html">Home</a></li> <!--กดไปlinkหน้าหลัก-->
+      <li><a href="เนือหา  History.html">History</a></li> <!--กดไปlinkหน้าประวัติ-->
+      <li><a href="Derivation.html">Derivation</a></li> <!--กดไปlinkหน้าที่มา-->
+      <li><a href="Members.html">Members</a></li>   <!--กดไปlinkหน้าmember-->
+      <li><a href="Albums.html">Albums</a></li> <!--กดไปlinkหน้าalbums-->
+      <li><a href="Awars.html">Awars</a></li> <!--กดไปlinkหน้าAwars-->
+      <li><a href="Satisfaction.html">Satisfaction</a></li> <!--กดไปlinkหน้าประเมินเว็บ-->
+  </ul>
+</div>
+<br>
+  <center><h1 style ="font-size: 4vw;"><font color ="#CCFF00">As If It’s Your Last (Digital Single)</font></center></h1>
+    <br>
+    <h2 align = "center"><font color ="#99FFCC"><font size = "6vw">Tracklist</font></font></h2><!--ให้h2 อยู่ตรงกลาง-->
+<br>
+<br>
+<div class="mx-2">
+  <div class = "container"> <!--Container เป็นกล่องสำหรับเก็บเนื้อหา ส่วนประกอบต่าง ๆ ไว้ภายในเป็นรูปแบบขนาดตายตัว แสดงอยู่กึ่งกลางหน้าจอ--> 
+     <div class ="music-container"> <!--Container เป็นกล่องสำหรับเก็บเพลง แสดงอยู่กึ่งกลางหน้าจอ--> 
+      <div class="text-center xyz">
+        <h2 class="pt-2 fw-bold"><font color ="#CCFFFF" ><font size = "5vw">As If It’s Your Last</font></font></h2>
+      <br>
+        <div class="box"> 
+          <div class = "image">
+              <img src=".//picture/75.jpg"alt=""> <!--นำเข้ารูป โดยไม่มีคำอธิบาย-->
+          </div>
+          <div class = "music">
+              <audio src =".//music/AS IF ITS YOUR LAST.mp3" controls></audio> <!--นำเข้าเพลง และมีคำสั่ง control เพื่อเพิ่มการควบคุมเสียง เช่น เล่นเพลง หยุดเพลง ปรับระดับเสียง-->
+            </div>
+          </div>
+        </div>
+        </div>
+        <h3><center><font color ="#CCFFFF"><font size = "3vw">แหล่งอ้างอิง</font></font></center></h3>
+          <body vlink = "white" link = "yellow" alink = "red"> <!--ตัวอักษรlink ถ้าเราเคยเยี่ยมชมเว็บ ลิ้งค์เว็บจะเป็นสีขาว แต่ถ้าเรายังไม่ได้ชมลิ้งค์เว็บ ลิ้งค์เว็บจะเป็นสีเหลือง  และเมื่อคลิกลิ้งค์จะเป็นสีแดง-->
+	          <center><a href = "https://music.trueid.net/th-th/detail/0p9l74Nm5gl6">Trueid</center>
+	           </a>
+
+        </div>
+        </div>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+    <html lang="en" dir="ltr">
+<head>
+	<meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- width=device-width คือ การกำหนดขนาดหน้าเว็บให้ปรับขนาดตามความละเอียดหน้าจอ
+    ส่วน initial-scale=1.0 คือการกำหนดขนาด scale ของงานให้เท่ากับ 1 เท่าของหน้าจอ-->
+  <link rel = "shortcut icon" type ="x-icon" href="./picture/iconblackpink.png">
+	<title> Satisfaction </title>
+    <style>
+        body{
+            background-image: url("./picture/win.png");
+            background-attachment: fixed;   /*เพื่อให้รูปพื้นหลังไม่เลื่อนตามเวลาเลื่อนscrollbar*/
+            background-size: 100% 100%;  /*ให้รูปมีขนาดเท่ากับหน้าจอ*/
+        }
+		  *{
+            margin:0; /*ระยะห่างภายนอกกรอบ เป็น0*/
+            padding:0; /*ช่องว่างภายในกรอบ เป็น0*/
+        }
+		  .wrapper{
+            width: 500px; /*ความกว้าง 500px*/
+            margin: auto; /*ระยะห่างภายนอกกรอบ เป็นอัตโนมัติ ให้browser คำนวณให้*/
+            padding: 20px; /*ช่องว่างภายในกรอบ เป็น20 px*/
+            background: #F4A460; 
+            margin-top: 20px;/* เว้นระยะขอบบน 20 px*/
+        }
+		  h3{
+          color: #C71585;
+          padding: 10px; /*ช่องว่างภายในกรอบ เป็น10 px*/
+          background: #FFB6C1; 
+          margin-bottom: 5px; /*เว้นระยะขอบล่าง 5 px*/
+          text-align: center;/*ตำแหน่งตัวอักษร อยู่ตรงกลาง*/
+        }
+		  table{width: 500px; 
+          background: #FFEFD5;
+          border: 1px solid;/*เส้นขอบ 1px เข้ม*/
+        }
+		  input[type="name"]{
+          width: 325px; /*ความกว้าง 325px*/
+          padding: 10px; /*ช่องว่างภายในกรอบ เป็น10 px*/
+          border-radius: 5px; /*เส้นขอบโค้ง 5 px*/
+          border: 1px solid black; /*เส้นขอบ 1 px  เข้ม สีดำ*/
+          margin: 10px 0;/*เว้นระยะขอบบนและล่าง ด้านละ 10px and เว้นระยะขอบซ้ายและขวา ด้านละ 0px*/
+        }
+		  input[type="email"]{
+          width: 325px; /*ความกว้าง 325 px*/
+          padding: 10px; /*ช่องว่างภายในกรอบ เป็น10 px*/
+          border-radius: 5px; /*เส้นขอบโค้ง 5 px*/
+          border: 1px solid black; /*เส้นขอบ 1 px  เข้ม สีดำ*/
+          margin: 10px 0;/*เว้นระยะขอบบนและล่าง ด้านละ 10px and เว้นระยะขอบซ้ายและขวา ด้านละ 0px*/
+        }
+		  input[type="country"]{
+          width: 325px; /*ความกว้าง 325 px*/
+          padding: 10px; /*ช่องว่างภายในกรอบ เป็น10 px*/
+          border-radius: 5px; /*เส้นขอบโค้ง 5 px*/
+          border: 1px solid black; /*เส้นขอบ 1 px  เข้ม สีดำ*/
+          margin: 10px 0;/*เว้นระยะขอบบนและล่าง ด้านละ 10px and เว้นระยะขอบซ้ายและขวา ด้านละ 0px*/
+        }
+		  .syarat{
+          margin-top: 10px;/* เว้นระยะขอบบน 10 px*/
+        }
+		  .syarat a{
+          color: #FFB6C1
+        }
+		  input[type="submit"]{
+          width: 100px; /*ความกว้าง 100 px*/
+          padding: 10px; /*ช่องว่างภายในกรอบ เป็น10 px*/
+          border-radius: 20px; /*เส้นขอบโค้ง 20 px*/
+          color: #ffffff; 
+          background: #FFB6C1; 
+          font-size: 20px; 
+          font-weight: bold; /*font size หนา*/
+          margin: 10px 0;/*เว้นระยะขอบบนและล่าง ด้านละ 10px and เว้นระยะขอบซ้ายและขวา ด้านละ 0px*/
+        }
+        /*กำหนดเงาข้อความ text-shadow ให้กับหัวข้อ โดยโครงสร้างเป็นดังนี้้ text-shadow: moveRight moveUp color; */
+      h2{
+        text-shadow: 3px 2px rgb(191, 197, 247);  /*เงาของตัวอักษรให้มีความหนา 3px เบลอ 2 px สีเงา*/
+        }
+    </style>
+</head>
+<body>
+    <div align = "center">
+    <link rel="stylesheet" href="bp1.css"> 
+<div class="container bg"> <!--Container เป็นกล่องสำหรับเก็บเนื้อหา ส่วนประกอบต่าง ๆ ไว้ภายในเป็นรูปแบบขนาดตายตัว แสดงอยู่กึ่งกลางหน้าจอ--> 
+  <div class="navBar"> <!--menu web-->
+    <div class="logo"> <!--menu web-->
+      <a href="#">
+      </a>
+    </div>
+    <ul><!--list menu webpage-->
+      <li><a href="Blackpink project.html">Home</a></li>
+      <li><a href="เนือหา  History.html">History</a></li>
+      <li><a href="Derivation.html">Derivation</a></li>
+      <li><a href="Members.html">Members</a></li> 
+      <li><a href="Albums.html">Albums</a></li>
+      <li><a href="Awars.html">Awars</a></li>
+      <li><a href="Satisfaction.html">Satisfaction</a></li>
+  </ul>
+  <div class="content"> <!--ข้อมูลในเว็บ-->
+    <div class="phuket" style="width:100%; height: auto;">  <!--กำหนดให้เนื้อหาในเว็บ มีความกว้าง 100% ให้ความสูงเป็นอัตโนมัติ เพราะให้browser คำนวณความสูงให้เป็นค่าเริ่มต้นนั่นเอง-->
+            <h2 style ="font-size: 6vw;"><font color = "#DDF1F1 ">Satisfaction of this Web</font></h2>
+            <div class="wrapper"><!--form-->
+              <h3 style = "font-size: 2vw;"><font color = "black">Form Satisfaction</font></h3>
+              <form>
+                <table>
+                  <tr>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black">Name</font>
+                    </td>
+                    <td>
+                      :
+                    </td>
+                    <td>
+                      <input type="name" name="" placeholder="Name "> <!--ป้อนชื่อ-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black"> Email</font>
+                    </td>
+                    <td style="font-size: 1vw;">
+                      <font color = "black"> :</font>
+                    </td>
+                    <td>
+                      <input type="email" name="" placeholder="Email "><!--ป้อนอีเมล-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black">Country</font>
+                    </td>
+                    <td>
+                      :
+                    </td>
+                    <td>
+                      <input type="country" name="" placeholder="Country"><!--ป้อนประเทศ-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black">Idol</font>
+                    </td>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black"> : </font>
+                    </td>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black"><input type="radio" name=""> Jisoo</font> <!--choice cercle-->
+                      <font color = "black"><input type="radio" name=""> Jennie</font> <!--choice cercle-->
+                      <font color = "black"><input type="radio" name="">Lisa</font></font> <!--choice cercle-->
+                      <font color = "black"><input type="radio" name=""> Rosé</font> <!--choice cercle-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black">  Suggestion</font> 
+                    </td>
+                    <td  style="font-size: 1vw;">
+                      <font color = "black">  :</font>
+                    </td>
+                    <td>
+                      <textarea cols="40" rows="5"></textarea> <!-- size box ที่พิมพ์ข้อความ-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"  style="font-size: 1vw;"> <!--ให้ช่องเซลล์นั้นจะมีความกว้างเท่ากับ 3 คอลัมน์-->
+                      <font color = "black"><p class="syarat"><input type="checkbox" name=""> Remember me </font></p> <!--choice check-->
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" align="center"  style="font-size: 1vw;"> <!--ให้ช่องเซลล์นั้นจะมีความกว้างเท่ากับ 3 คอลัมน์-->
+                      <button class ="btn-1" onclick="Submit()">Submit</button> 
+                      <script src="Button.js"></script>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+  
+</body>
+</html>
